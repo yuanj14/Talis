@@ -1,0 +1,3 @@
+com\czu\MybaitsApplication.class
+com\czu\pojo\User.class
+com\czu\mapper\UserMapper.class
