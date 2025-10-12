@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: tails-management
+  datasource:
+    #    连接数据库
+    url: jdbc:mysql://localhost:3306/talis
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1234
+#    mybatis mapper
+mybatis:
+  configuration:
+    #    print log in terminal
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # a_v -> aV 查询映射
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml

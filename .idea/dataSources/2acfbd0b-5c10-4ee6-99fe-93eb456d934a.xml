@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="web01@localhost">
+<dataSource name="talis@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.53">
     <root id="1">
       <DefaultCasing>lower/lower</DefaultCasing>
@@ -787,7 +787,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <schema id="227" parent="1" name="nowc">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-10-11.12:46:53</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-10-12.09:04:53</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
     <schema id="228" parent="1" name="performance_schema">
@@ -796,217 +796,270 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <schema id="229" parent="1" name="sys">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="230" parent="1" name="web01">
+    <schema id="230" parent="1" name="talis">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Current>1</Current>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-10-11.12:46:53</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-10-12.09:04:53</LastIntrospectionLocalTimestamp>
       <CollationName>utf8_bin</CollationName>
     </schema>
-    <user id="231" parent="1" name="mysql.session">
+    <schema id="231" parent="1" name="web01">
+      <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
+      <LastIntrospectionLevel>3</LastIntrospectionLevel>
+      <LastIntrospectionLocalTimestamp>2025-10-12.09:04:53</LastIntrospectionLocalTimestamp>
+      <CollationName>utf8_bin</CollationName>
+    </schema>
+    <user id="232" parent="1" name="mysql.session">
       <Host>localhost</Host>
     </user>
-    <user id="232" parent="1" name="mysql.sys">
+    <user id="233" parent="1" name="mysql.sys">
       <Host>localhost</Host>
     </user>
-    <user id="233" parent="1" name="root">
+    <user id="234" parent="1" name="root">
       <Host>localhost</Host>
     </user>
-    <user id="234" parent="1" name="ruo11">
+    <user id="235" parent="1" name="ruo11">
       <Host>localhost</Host>
     </user>
-    <table id="235" parent="227" name="emp">
+    <table id="236" parent="227" name="emp">
       <Comment>员工表</Comment>
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="236" parent="227" name="tb_user">
+    <table id="237" parent="227" name="tb_user">
       <Comment>用户表</Comment>
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="237" parent="230" name="user">
+    <table id="238" parent="230" name="dept">
+      <Comment>部门表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_bin</CollationName>
+    </table>
+    <table id="239" parent="231" name="user">
       <Comment>用户表</Comment>
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8_bin</CollationName>
     </table>
-    <column id="238" parent="235" name="id">
+    <column id="240" parent="236" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>ID,主键</Comment>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(10) unsigned|0s</StoredType>
     </column>
-    <column id="239" parent="235" name="username">
+    <column id="241" parent="236" name="username">
       <Comment>用户名</Comment>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="240" parent="235" name="password">
+    <column id="242" parent="236" name="password">
       <Comment>密码</Comment>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(32)|0s</StoredType>
     </column>
-    <column id="241" parent="235" name="name">
+    <column id="243" parent="236" name="name">
       <Comment>姓名</Comment>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>varchar(10)|0s</StoredType>
     </column>
-    <column id="242" parent="235" name="gender">
+    <column id="244" parent="236" name="gender">
       <Comment>性别, 1:男, 2:女</Comment>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>tinyint(3) unsigned|0s</StoredType>
     </column>
-    <column id="243" parent="235" name="phone">
+    <column id="245" parent="236" name="phone">
       <Comment>手机号</Comment>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>char(11)|0s</StoredType>
     </column>
-    <column id="244" parent="235" name="job">
+    <column id="246" parent="236" name="job">
       <Comment>职位, 1:班主任,2:讲师,3:学工主管,4:教研主管,5:咨询师</Comment>
       <Position>7</Position>
       <StoredType>tinyint(3) unsigned|0s</StoredType>
     </column>
-    <column id="245" parent="235" name="salary">
+    <column id="247" parent="236" name="salary">
       <Comment>薪资</Comment>
       <Position>8</Position>
       <StoredType>int(10) unsigned|0s</StoredType>
     </column>
-    <column id="246" parent="235" name="image">
+    <column id="248" parent="236" name="image">
       <Comment>头像</Comment>
       <Position>9</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="247" parent="235" name="entry_date">
+    <column id="249" parent="236" name="entry_date">
       <Comment>入职日期</Comment>
       <Position>10</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="248" parent="235" name="create_time">
+    <column id="250" parent="236" name="create_time">
       <Comment>创建时间</Comment>
       <Position>11</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="249" parent="235" name="update_time">
+    <column id="251" parent="236" name="update_time">
       <Comment>修改时间</Comment>
       <Position>12</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <index id="250" parent="235" name="PRIMARY">
+    <index id="252" parent="236" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="251" parent="235" name="username">
+    <index id="253" parent="236" name="username">
       <ColNames>username</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="252" parent="235" name="phone">
+    <index id="254" parent="236" name="phone">
       <ColNames>phone</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="253" parent="235" name="PRIMARY">
+    <key id="255" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="254" parent="235" name="username">
+    <key id="256" parent="236" name="username">
       <UnderlyingIndexName>username</UnderlyingIndexName>
     </key>
-    <key id="255" parent="235" name="phone">
+    <key id="257" parent="236" name="phone">
       <UnderlyingIndexName>phone</UnderlyingIndexName>
     </key>
-    <column id="256" parent="236" name="id">
+    <column id="258" parent="237" name="id">
       <AutoIncrement>3</AutoIncrement>
       <Comment>ID,唯一标识</Comment>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="257" parent="236" name="username">
+    <column id="259" parent="237" name="username">
       <Comment>用户名</Comment>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="258" parent="236" name="name">
+    <column id="260" parent="237" name="name">
       <Comment>姓名</Comment>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(10)|0s</StoredType>
     </column>
-    <column id="259" parent="236" name="age">
+    <column id="261" parent="237" name="age">
       <Comment>年龄</Comment>
       <Position>4</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="260" parent="236" name="gender">
+    <column id="262" parent="237" name="gender">
       <Comment>性别</Comment>
       <DefaultExpression>&apos;男&apos;</DefaultExpression>
       <Position>5</Position>
       <StoredType>char(1)|0s</StoredType>
     </column>
-    <index id="261" parent="236" name="PRIMARY">
+    <index id="263" parent="237" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="262" parent="236" name="username">
+    <index id="264" parent="237" name="username">
       <ColNames>username</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="263" parent="236" name="PRIMARY">
+    <key id="265" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="264" parent="236" name="username">
+    <key id="266" parent="237" name="username">
       <UnderlyingIndexName>username</UnderlyingIndexName>
     </key>
-    <column id="265" parent="237" name="id">
-      <AutoIncrement>6</AutoIncrement>
+    <column id="267" parent="238" name="id">
+      <AutoIncrement>7</AutoIncrement>
+      <Comment>ID, 主键</Comment>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int(10) unsigned|0s</StoredType>
+    </column>
+    <column id="268" parent="238" name="name">
+      <Comment>部门名称</Comment>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(10)|0s</StoredType>
+    </column>
+    <column id="269" parent="238" name="create_time">
+      <Comment>创建时间</Comment>
+      <Position>3</Position>
+      <StoredType>datetime|0s</StoredType>
+    </column>
+    <column id="270" parent="238" name="update_time">
+      <Comment>修改时间</Comment>
+      <Position>4</Position>
+      <StoredType>datetime|0s</StoredType>
+    </column>
+    <index id="271" parent="238" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="272" parent="238" name="name">
+      <ColNames>name</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="273" parent="238" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="274" parent="238" name="name">
+      <UnderlyingIndexName>name</UnderlyingIndexName>
+    </key>
+    <column id="275" parent="239" name="id">
+      <AutoIncrement>7</AutoIncrement>
       <Comment>ID,主键</Comment>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(10) unsigned|0s</StoredType>
     </column>
-    <column id="266" parent="237" name="username">
+    <column id="276" parent="239" name="username">
       <Comment>用户名</Comment>
       <Position>2</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="267" parent="237" name="password">
+    <column id="277" parent="239" name="password">
       <Comment>密码</Comment>
       <Position>3</Position>
       <StoredType>varchar(32)|0s</StoredType>
     </column>
-    <column id="268" parent="237" name="name">
+    <column id="278" parent="239" name="name">
       <Comment>姓名</Comment>
       <Position>4</Position>
       <StoredType>varchar(10)|0s</StoredType>
     </column>
-    <column id="269" parent="237" name="age">
+    <column id="279" parent="239" name="age">
       <Comment>年龄</Comment>
       <Position>5</Position>
       <StoredType>tinyint(3) unsigned|0s</StoredType>
     </column>
-    <index id="270" parent="237" name="PRIMARY">
+    <index id="280" parent="239" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="271" parent="237" name="PRIMARY">
+    <key id="281" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

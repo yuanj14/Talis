@@ -7,12 +7,14 @@
         <option value="$PROJECT_DIR$/mvn-project01/pom.xml" />
         <option value="$PROJECT_DIR$/Springboot-web/pom.xml" />
         <option value="$PROJECT_DIR$/mybaits/pom.xml" />
+        <option value="$PROJECT_DIR$/Tails-Management/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/Springboot-web/pom.xml" />
         <option value="$PROJECT_DIR$/mvn-project01/pom.xml" />
+        <option value="$PROJECT_DIR$/mybaits/pom.xml" />
       </set>
     </option>
   </component>
