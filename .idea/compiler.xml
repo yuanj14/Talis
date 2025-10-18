@@ -15,12 +15,12 @@
         <processorPath useClasspath="false">
           <entry name="D:/mvn/apache-maven-3.9.11/repo/org/projectlombok/lombok/1.18.40/lombok-1.18.40.jar" />
         </processorPath>
+        <module name="mybaits" />
         <module name="Tails-Management" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="21">
       <module name="mvn-project01" target="21" />
-      <module name="mybaits" target="21" />
       <module name="Springboot-web" target="21" />
     </bytecodeTargetLevel>
   </component>

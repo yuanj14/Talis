@@ -1,17 +1,38 @@
 spring:
   application:
-    name: tails-management
+    name: talis
   datasource:
-    #    连接数据库
-    url: jdbc:mysql://localhost:3306/talis
+    #配置数据库的连接信息
+    url: jdbc:mysql://localhost:3306/db07
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 1234
-#    mybatis mapper
+  output:
+    ansi:
+      enabled: always
+
+#Mybatis的相关配置
 mybatis:
   configuration:
-    #    print log in terminal
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-    # a_v -> aV 查询映射
+    #开启驼峰命名映射开关
     map-underscore-to-camel-case: true
   mapper-locations: classpath:mapper/*.xml
+
+#监听端口
+server:
+  port: 8080
+
+#阿里云OSS
+aliyun:
+  oss:
+    endpoint: https://oss-cn-beijing.aliyuncs.com
+    bucketName: cn-shenzhen-talis
+    region: cn-beijing
+
+#配置事务管理日志级别
+logging:
+  level:
+    org.springframework.jdbc.support.JdbcTransactionManager: debug
+
+

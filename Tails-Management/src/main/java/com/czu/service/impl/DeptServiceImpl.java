@@ -44,6 +44,4 @@ public class DeptServiceImpl implements DeptService {
         deptMapper.update(dept);
 
     }
-
-
 }

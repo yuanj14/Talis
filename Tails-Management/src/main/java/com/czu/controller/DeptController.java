@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@RestController // 网络请求 和提取url信息
 public class DeptController {
 
     @Autowired
