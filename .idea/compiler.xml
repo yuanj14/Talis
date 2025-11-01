@@ -7,14 +7,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="tlias-web-management" />
+      </profile>
+      <profile name="Annotation profile for Tails-Management" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="D:/mvn/apache-maven-3.9.11/repo/org/projectlombok/lombok/1.18.40/lombok-1.18.40.jar" />
+        </processorPath>
+        <module name="mybaits" />
+        <module name="Tails-Management" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="21" />
+    <bytecodeTargetLevel target="21">
+      <module name="mvn-project01" target="21" />
+      <module name="Springboot-web" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="tlias-web-management" options="-parameters" />
+      <module name="Springboot-web" options="-parameters" />
+      <module name="Tails-Management" options="-parameters" />
+      <module name="mybaits" options="-parameters" />
     </option>
   </component>
 </project>
